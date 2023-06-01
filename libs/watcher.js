@@ -32,6 +32,8 @@ const checkServers = async () => {
 
                     site.up = false
                     result.push(site)
+                    console.log(`${site.name} is down`)
+
                     return site
                 }
                 if (!site.up) {
@@ -40,6 +42,9 @@ const checkServers = async () => {
 
                 site.up = true
                 result.push(site)
+
+                console.log(`${site.name} is up`)
+
                 return site
             })
             .catch(error => {
