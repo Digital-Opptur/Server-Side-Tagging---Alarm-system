@@ -1,6 +1,13 @@
 require('dotenv').config()
 
 /**
+ * Setup webserver
+ */
+const express = require('express')
+const app = express()
+const port = 3330
+
+/**
  * 3rd party libs
  */
 const fs = require('fs');
@@ -34,4 +41,17 @@ cron.schedule('*/2 * * * *', () => {
 });
 
 
+/**
+ * Status endpoints
+ */
 
+app.get('/', (req, res) => {
+    res.send('Hello World!')
+})
+app.get('/list', (req, res) => {
+    res.status(200).json({status: "OK", data: sitelist})
+})
+
+app.listen(port, () => {
+    console.log(`Example app listening on port ${port}`)
+})
