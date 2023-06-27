@@ -1,4 +1,4 @@
-# NodeJS_SST_Alarms
+# Server side tagging - Alarm system
 
 This is a backend system developed in Node.js that checks the server-side preview and provisioning servers for Google Tag Manager. It also sends out email notifications based on the status of the servers.
 
