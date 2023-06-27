@@ -6,6 +6,9 @@ import { useRouter } from 'next/router';
 import ListItem from '../components/ListItem';
 
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faRefresh } from '@fortawesome/free-solid-svg-icons'
+
 export default function Home() {
   const router = useRouter();
 
@@ -52,7 +55,10 @@ export default function Home() {
             ))
           :
             // <p>Loading...</p>
-            <img src="https://cdn.dribbble.com/users/3742211/screenshots/9195657/media/6796a544d6f9ef1293d8d8d9e60d38d5.gif" height={50} />
+            // <img src="https://cdn.dribbble.com/users/3742211/screenshots/9195657/media/6796a544d6f9ef1293d8d8d9e60d38d5.gif" height={50} />
+            <div style={{width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+              <FontAwesomeIcon onClick={() => {}} icon={faRefresh} style={{height: 22}} className={styles.spinner} />
+            </div>
           }
         </div>
 

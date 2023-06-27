@@ -1,22 +1,30 @@
 import styles from '../styles/ListItem.module.css';
 
+import { useState } from 'react'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheckCircle, faCoffee, faRefresh, faWarning } from '@fortawesome/free-solid-svg-icons'
 
-
 import moment from 'moment'
 import Link from 'next/link';
+import { checkSite } from '../libs/api';
 
 const ListItem = (item) => {
+    const [isLoading, setLoading] = useState();
     /**
      * TODO: Add refresh function for site based on db._id
      */
+
     return(
         <div className={styles.item}>
             <div className={styles.itemWrapper}>
-                <FontAwesomeIcon className={styles.button} icon={faRefresh} style={{height: 16}} />
-                <p style={{marginLeft: 10}}>{moment(item?.ts).format('HH:mm:ss')}</p> 
-                <p style={{marginLeft: 20}}>{item?.name}</p>
+                {isLoading ?
+                    <FontAwesomeIcon onClick={() => {}} icon={faRefresh} style={{height: 16}} className={styles.spinner} />
+                    :
+                    <FontAwesomeIcon onClick={() => {setLoading(true); checkSite(item?.url).then(data => { item = data; setLoading(false)}).catch(error => {setLoading(false)})}} className={styles.button} icon={faRefresh} style={{height: 16}} />
+                }
+                <p style={{marginLeft: 10, fontSize: 14, fontWeight: '600'}}>{moment(item?.ts).format('HH:mm:ss')}</p> 
+                <p style={{marginLeft: 20, fontSize: 16}}>{item?.name}</p>
             </div>
             <div className={styles.itemWrapper}>
                 <p  style={{marginRight: 10}}>

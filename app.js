@@ -19,7 +19,7 @@ const cron = require('node-cron')
  * import/require json file with overview over our sites
  */
 const sitelist = require('./data/list.json');
-const { checkServers } = require('./libs/watcher');
+const { checkServers, checkSingleServer } = require('./libs/watcher');
 const { sendNotification } = require('./libs/smtp');
 
 /**
@@ -49,6 +49,16 @@ app.get('/', (req, res) => {
     res.send('Hello World!')
 })
 app.get('/list', (req, res) => {
+    res.status(200).json({status: "OK", data: sitelist})
+})
+app.post('/check', (req, res) => {
+    checkSingleServer(req.body.url)
+    .then(({data}) => {
+        console.log(data)
+    })
+    .catch(error => {
+
+    })
     res.status(200).json({status: "OK", data: sitelist})
 })
 

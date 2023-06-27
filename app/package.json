@@ -10,6 +10,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "axios": "^1.4.0",
+    "fs": "^0.0.1-security",
     "moment": "^2.29.4",
     "next": "latest",
     "nookies": "^2.5.2",
