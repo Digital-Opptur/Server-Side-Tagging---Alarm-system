@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Gaitline Preview server",
+        "url": "https://preview.gaitline.com",
+        "ts": "2023-06-01T09:52:00.314Z",
+        "up": false
+    },
+    {
+        "name": "Gaitline Provisioning server",
+        "url": "https://analytics.gaitline.com",
+        "ts": "2023-06-01T09:52:00.318Z",
+        "up": false
+    },
+    {
+        "name": "Digital Opptur Preview server",
+        "url": "https://gtm.digitalopptur.no",
+        "ts": "2023-06-01T09:52:00.318Z",
+        "up": true
+    },
+    {
+        "name": "Digital Opptur Provisioning server",
+        "url": "https://analytics.digitalopptur.no",
+        "ts": "2023-06-01T09:52:00.318Z",
+        "up": true
+    }
+]
