@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Gaitline Preview server",
+        "url": "https://preview.gaitline.com",
+        "ts": "2023-06-12T08:08:00.300Z",
+        "up": true
+    },
+    {
+        "name": "Gaitline Provisioning server",
+        "url": "https://analytics.gaitline.com",
+        "ts": "2023-06-12T08:08:00.302Z",
+        "up": true
+    },
+    {
+        "name": "UBR Provisioning server",
+        "url": "https://analytics.ubr.no",
+        "ts": "2023-06-12T08:08:00.302Z",
+        "up": true
+    },
+    {
+        "name": "UBR Preview server",
+        "url": "https://gtm.ubr.no",
+        "ts": "2023-06-12T08:08:00.308Z",
+        "up": true
+    },
+    {
+        "name": "Digital Opptur Preview server",
+        "url": "https://gtm.digitalopptur.no",
+        "ts": "2023-06-12T08:08:00.308Z",
+        "up": true
+    }
+]
